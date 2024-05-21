@@ -13,6 +13,8 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+logging.getLogger('httpx').setLevel(logging.WARNING)
+
 
 TOKEN = '6913439784:AAEhIjZm-oSavOqtR1RXHQ3F__KqDDfCQRw'
 
