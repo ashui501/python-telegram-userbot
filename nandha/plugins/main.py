@@ -10,15 +10,15 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     user_id = update.effective_user.id
     user_name = update.effective_user.first_name
-    mention = helpers.mention_markdown(user_id, user_name)
+    mention = helpers.escape_markdown(helpers.mention_markdown(user_id, user_name))
 
     keyboard = [
         [
             InlineKeyboardButton("Group 🌟", url="NandhaChat.t.me"),
-            InlineKeyboardButton("Channel 💫", url="NandhaBots.t.me"),
+            InlineKeyboardButton("Channel 🌟", url="NandhaBots.t.me"),
         ],
         [
-            InlineKeyboardButton("Nandha 💀", url=f"tg://user?id={user_id}")
+            InlineKeyboardButton("💀 Nandha 💀", url=f"tg://user?id={user_id}")
         ]
     ]
 
